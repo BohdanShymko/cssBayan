@@ -110,6 +110,7 @@ h6 {
   text-align: center;
   font-size: 3rem;
   padding: 1rem 0;
+  color: red;
 }
 
 .main {
@@ -117,8 +118,10 @@ h6 {
   flex: 1 1 auto;
 }
 
-.checkbox {
+.checkbox__item {
+  margin: 2rem 0;
   cursor: pointer;
+  padding: 0 1vh;
 }
 
 .checkbox__input {
@@ -126,16 +129,30 @@ h6 {
 }
 
 .checkbox__title {
-  border: 1px solid black;
+  border-bottom: 1px solid black;
   display: block;
   margin: 0px 0px 10px 0px;
   font-size: 2rem;
   cursor: pointer;
+  text-align: center;
+  padding-bottom: 10px;
+  background: url("/cssBayan/cssBayan/images/icon_2.svg") no-repeat;
+  background-size: contain;
+  background-position: right;
+  transition-duration: 1s;
+}
+
+.checkbox__input:checked ~ .checkbox__title {
+  transition-duration: 1s;
+  color: black;
+  background: url("/cssBayan/cssBayan/images/icon_1.svg") no-repeat;
+  background-size: contain;
+  background-position: right;
 }
 
 .checkbox__checked {
-  border: 1px solid black;
   display: none;
+  text-align: center;
 }
 
 .checkbox__input:checked ~ .checkbox__checked {
@@ -147,6 +164,13 @@ h6 {
   padding: 0.5rem;
 }
 
-.footer__text {
-  text-align: center;
+.footer__item {
+  display: flex;
+  justify-content: space-between;
+}
+
+img {
+  width: 30%;
+  object-fit: contain;
+  border-radius: 50px;
 }
