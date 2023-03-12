@@ -193,6 +193,7 @@ h6 {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: right;
+  color: black;
 }
 
 .checkbox__checked {
