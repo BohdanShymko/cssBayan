@@ -91,7 +91,7 @@ h6 {
 /*--------------------*/
 
 .wrapper {
-  max-width: 1920px;
+  max-width: 192rem;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -118,8 +118,12 @@ h6 {
   flex: 1 1 auto;
 }
 
-.checkbox:hover {
+.checkbox {
   color: blue;
+}
+
+.checkbox:hover {
+  color: black;
   cursor: pointer;
 }
 
@@ -141,16 +145,22 @@ h6 {
   cursor: pointer;
   text-align: center;
   padding-bottom: 10px;
-  background: url("/cssBayan/cssBayan/images/icon_2.svg") no-repeat;
+}
+
+.checkbox:hover .checkbox__title {
+  background-image: url("/cssBayan/cssBayan/images/icon_2.svg");
   background-size: contain;
+  background-repeat: no-repeat;
   background-position: right;
-  transition-duration: 2s;
+  transition: 2s;
+  transition-property: background-size, background-image;
 }
 
 .checkbox__input:checked ~ .checkbox__title {
-  transition-duration: 2s;
-  color: black;
-  background: url("/cssBayan/cssBayan/images/icon_1.svg") no-repeat;
+  transition: 2s; 
+  transition-property: background-size, background-image;
+  background-image: url("/cssBayan/cssBayan/images/icon_1.svg");
+  background-repeat: no-repeat;
   background-size: contain;
   background-position: right;
 }
